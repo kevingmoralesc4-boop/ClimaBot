@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ClomaBot — Demo</title>
+    <!-- Puedes ajustar estilos aquí -->
+    <style>
+      html, body { height: 100%; margin: 0; font-family: system-ui, Arial, sans-serif; }
+      .container { min-height: 100%; display: flex; align-items: center; justify-content: center; }
+      .info { text-align: center; max-width: 720px; padding: 1rem; }
+      /* Asegura que el df-messenger quede en una esquina si el componente lo permite */
+      df-messenger { --df-messenger-bot-message: #f1f1f1; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="info">
+        <h1>ClomaBot</h1>
+        <p>Este archivo carga el widget de Dialogflow Messenger para el agente "ClomaBot".</p>
+        <p>Si lo abres en un servidor o directamente en el navegador (dependiendo de la configuración CORS), verás el chat en la página.</p>
+      </div>
+    </div>
+
+    <!-- Código proporcionado -->
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+    <df-messenger
+      chat-title="ClomaBot"
+      agent-id="dd9839f0-e97d-4262-9fb6-c0f7066f4755"
+      language-code="es"
+    ></df-messenger>
+  </body>
+</html>
