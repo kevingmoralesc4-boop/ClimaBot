@@ -3,31 +3,58 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>ClomaBot — Demo</title>
-    <!-- Puedes ajustar estilos aquí -->
+    <title>ClimaBot — Demo</title>
     <style>
-      html, body { height: 100%; margin: 0; font-family: system-ui, Arial, sans-serif; }
-      .container { min-height: 100%; display: flex; align-items: center; justify-content: center; }
-      .info { text-align: center; max-width: 720px; padding: 1rem; }
-      /* Asegura que el df-messenger quede en una esquina si el componente lo permite */
-      df-messenger { --df-messenger-bot-message: #f1f1f1; }
+      html, body {
+        height: 100%;
+        margin: 0;
+        font-family: system-ui, Arial, sans-serif;
+        background: #f9f9f9;
+      }
+      .container {
+        min-height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem;
+      }
+      h1 {
+        margin-bottom: 0.5rem;
+      }
+      p {
+        margin-top: 0;
+        color: #333;
+      }
+      /* Puedes personalizar colores del chat aquí */
+      df-messenger {
+        --df-messenger-bot-message: #f1f1f1;
+        --df-messenger-button-titlebar-color: #1976d2;
+        --df-messenger-chat-background-color: #ffffff;
+        --df-messenger-send-icon: #1976d2;
+        --df-messenger-user-message: #e3f2fd;
+        position: fixed;
+        bottom: 16px;
+        right: 16px;
+      }
     </style>
   </head>
   <body>
     <div class="container">
-      <div class="info">
-        <h1>ClomaBot</h1>
-        <p>Este archivo carga el widget de Dialogflow Messenger para el agente "ClomaBot".</p>
-        <p>Si lo abres en un servidor o directamente en el navegador (dependiendo de la configuración CORS), verás el chat en la página.</p>
-      </div>
+      <h1>ClimaBot</h1>
+      <p>Interactúa con el bot para responder preguntas.</p>
+      <p>(Las opciones de respuesta múltiple aparecerán como botones si las configuras en Dialogflow).</p>
     </div>
 
-    <!-- Código proporcionado -->
+    <!-- Script del Messenger -->
     <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
     <df-messenger
-      chat-title="ClomaBot"
+      chat-title="ClimaBot"
       agent-id="dd9839f0-e97d-4262-9fb6-c0f7066f4755"
-      language-code="es"
-    ></df-messenger>
+      language-code="es">
+    </df-messenger>
   </body>
 </html>
+
+
